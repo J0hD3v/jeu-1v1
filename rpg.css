@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+
+/* MAIN */
+
+main {
+    height: 80vh;
+}
+
+.display {
+    height: 60vh;
+    overflow: hidden;
+}
+
+.display>img {
+    height: 20vh;
+    position: absolute;
+    top: 40vh;
+}
+
+.display>img:nth-of-type(1) {
+    left: 20vw;
+}
+.display>img:nth-of-type(2) {
+    right: 20vw;
+}
+
+.attackMoveFromLeft {
+    animation: attackFromLeft 0.5s ease-in 0s 1;
+}
+
+.attackMoveFromRight {
+    animation: attackFromRight 0.5s ease-in 0s 1;
+}
+
+.death {
+    animation: death 0.5s ease-in 0s 1;
+}
+
+
+@keyframes attackFromLeft {
+    0%      {transform: translateX(0vw);}
+    50%     {transform: translateX(10vw);}
+    100%    {transform: translateX(0vw);}
+}
+@keyframes attackFromRight {
+    0%      {transform: translateX(0vw);}
+    50%     {transform: translateX(-10vw);}
+    100%    {transform: translateX(0vw);}
+}
+@keyframes death {
+    0%      {transform: translateY(0vw); opacity: 100%;}
+    100%    {transform: translateY(10vw); opacity: 0%; display: none;}
+}
+
+
+.controls {
+    width: 100%;
+    height: 10vh;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.controls>button {
+    padding: 1em;
+    cursor: pointer;
+}
+
+
+.recap {
+    width: 100%;
+    height: 10vh;
+    background-color: lightsalmon;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+
+.infos_player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 50%;
+}
+
+.infos_player>div {
+    display: flex;
+}
+
+.infos_player>div>p {
+    margin: 1em;
+}
+
+
+#infos_player1 {
+    background-color: lightblue;
+}
+
+#infos_player2 {
+    background-color: lightgreen;
+}
